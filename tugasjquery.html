@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Handler</title>
+    <link rel="stylesheet" href="css/style1.css"
+  </head>
+  <body>
+    <h2>Letakan kursor ke masing-masing kotak untuk melihat gambar</h2>
+    <div id="div1">Hewan Bebek</div>
+    <div id="div2">Hewan kucing</div>
+    <div id="div3">Hewan Ayam</div>
+    <div id="div4">Hewan Buaya</div>
+
+    <audio id="audio1" src="audio/toy-ducks-quacking-82167.mp3"></audio>
+    <audio id="audio2" src="audio/cat-meow-6226.mp3"></audio>
+    <audio id="audio3" src="audio/2-Ayam-Berkokok (1) (mp3cut.net).mp3"></audio>
+    <audio id="audio4" src="audio/Download (1) (mp3cut.net).m4a"></audio>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+
+    <script>
+      $("document").ready(function () {
+        $("#div1").mouseover(function () {
+          $(this).css({
+            background: "url('https://www.shutterstock.com/image-vector/cute-cartoon-rubber-duck-vector-600nw-2276837591.jpg')",
+          });
+          $("#audio1")[0].play();
+        });
+        $("div").mouseout(function () {
+          $(this).css({
+            background: "green",
+          });
+        });
+        $("#div2").mouseover(function () {
+          $(this).css({
+            background:
+              "url('https://cdn1-production-images-kly.akamaized.net/pLJpvhxmg4Tnd-RaaZRvG_Aybnc=/800x450/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/3625934/original/065043600_1636348784-steve-tsang-OZjypvcu3uo-unsplash.jpg')",
+          });
+          $("#audio2")[0].play();
+        });
+        $("#div3").mouseover(function () {
+          $(this).css({
+            background: "url('https://jambiindependent.disway.id/upload/074cc3740f14d7a5c23e59bc939318e3.JPG')",
+          });
+          $("#audio3")[0].play();
+        });
+        $("#div4").mouseover(function () {
+          $(this).css({
+            background: "url('https://www.shutterstock.com/image-vector/cartoon-crocodile-isolated-on-white-260nw-1019020537.jpg')",
+          });
+          $("#audio4")[0].play();
+        });
+      });
+    </script>
+  </body>
+</html>
